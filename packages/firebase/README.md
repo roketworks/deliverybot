@@ -3,6 +3,10 @@
 Configures a firebase deployment target by implementing all services on top of
 firebase.
 
+### Deployment Prerequisites
+
+* Google Cloud account w/ firebase Blaze pay-as-you-go plan
+
 ### Deployment configuration
 
 During deployments files are copied from `env/<environment>` into `lib/config`
@@ -13,7 +17,12 @@ expected configuration files are:
 
 ```javascript
 {
-  "firebase": ...    // Firebase app configuration.
+  "firebase": {
+    "apiKey": "AIza....",
+    "projectId": "my-firebase-project",
+    "messagingSenderId": "1234546",
+    "databaseURL": "https://YOUR_APP.firebaseio.com"
+  }
   "stackdriver": ... // Stackdriver api key and project.
 }
 ```
@@ -30,6 +39,7 @@ expected configuration files are:
   "CLIENT_ID": "GitHub client id",
   "CLIENT_SECRET": "GitHub client secret",
   "WEBHOOK_SECRET": "GitHub webhook client secret",
+  "WEBHOOK_PATH": "Webhook path suffix",
   "APP_ID": "GitHub app id",
   "SLACK_APP_ID": "Slack app id",
   "SLACK_CLIENT_ID": "Slack client id",
