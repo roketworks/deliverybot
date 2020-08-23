@@ -6,6 +6,8 @@ firebase.
 ### Deployment Prerequisites
 
 * Google Cloud account w/ firebase Blaze pay-as-you-go plan
+* Firebase cli
+* GitHub App
 
 ### Deployment configuration
 
