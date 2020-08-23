@@ -6,7 +6,7 @@ firebase.
 ### Deployment Prerequisites
 
 * Google Cloud account w/ firebase Blaze pay-as-you-go plan
-  * IAM API enabled for Firebase project
+  * IAM API enabled for firebase project
   * Sevice account with following `Service Account Token Creator` role
 * Firebase cli
 
