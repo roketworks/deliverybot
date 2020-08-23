@@ -6,8 +6,9 @@ firebase.
 ### Deployment Prerequisites
 
 * Google Cloud account w/ firebase Blaze pay-as-you-go plan
+  * IAM API enabled for Firebase project
+  * Sevice account with following `Service Account Token Creator` role
 * Firebase cli
-* GitHub App
 
 ### Deployment configuration
 
@@ -49,4 +50,12 @@ expected configuration files are:
   "SLACK_SECRET": "Slack signing secret",
   "SLACK_LOGIN_URL": "Slack app url",
 }
+```
+
+## Deployment steps
+
+```shell
+firebase login        # Login using google cloud credentials
+firebase use --add    # Add project alias
+yarn run deploy:{env} # Execute deployment
 ```
